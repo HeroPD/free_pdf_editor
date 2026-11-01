@@ -1,0 +1,63 @@
+name: Bug report
+description: Something doesn't work, looks wrong, or the app crashed.
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time. **Issues are public:** don't attach PDFs with private information. If the problem only happens with one file, say so and we'll find a safe way to look at it.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: And what you expected instead.
+      placeholder: When I retype the date on page 1 and save, the line moves to the left.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open a PDF made by …
+        2. Double-click the line …
+        3. Type … and save
+    validations:
+      required: true
+  - type: dropdown
+    id: file
+    attributes:
+      label: Does it happen with every PDF, or one file?
+      options:
+        - Every PDF I tried
+        - Only one file (or a few)
+        - Not related to a file
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Where does the PDF come from?
+      description: The app that made it, if you know (Word, Chrome, a scanner, a bank…). It helps a lot.
+  - type: input
+    id: version
+    attributes:
+      label: App version
+      description: Filled in when you use Help → Report a Bug in the app.
+      placeholder: "0.1.0"
+    validations:
+      required: true
+  - type: input
+    id: system
+    attributes:
+      label: System
+      description: Filled in by the app; add the version, e.g. macOS 15.3, Windows 11, Ubuntu 24.04.
+      placeholder: "macos-aarch64, macOS 15.3"
+    validations:
+      required: true
+  - type: textarea
+    id: more
+    attributes:
+      label: Screenshots or anything else
+      description: Screenshots help, as long as they don't show private information.
